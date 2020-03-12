@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+    firma:
+        build:
+            context: .
+            dockerfile: compose/firma
+        volumes:
+            - ./app:/app
+        ports:
+            - "8000:8000"
+        command: python manage.py runserver 0.0.0.0:8000
+        depends_on:
+            - db
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: ${POSTGRES_USER}
+            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_DB: ${POSTGRES_DB}
