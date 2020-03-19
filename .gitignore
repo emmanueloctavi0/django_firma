@@ -32,10 +32,7 @@ media
 .Python build/
 develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
+downloads/rest_framework
 lib64/
 parts/
 sdist/
@@ -100,9 +97,8 @@ venv.bak/
 # sftp configuration file 
 sftp-config.json
 
-# Package control specific files Package 
-Control.last-run
-Control.ca-list
+# docker yml
+docker-compose.yml
 Control.ca-bundle
 Control.system-ca-bundle
 GitHub.sublime-settings
@@ -115,3 +111,24 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+
+
+*.code-workspace
+
+# macOs
+.DS_Store
+
+# mypy
+.mypy_cache/
+
+# db-data
+mysql/
+
+# static files for nginx
+staticfiles/
+
+# docker yml
+docker-compose.yml
+
+# nginx config file
+nginx/conf/default.conf
