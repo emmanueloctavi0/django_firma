@@ -1,4 +1,4 @@
-Django==2.2.13
+Django==2.2.18
 uWSGI==2.0.18
 flake8==3.7.9
 django-environ==0.4.5
